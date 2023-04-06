@@ -48,7 +48,7 @@ public class MainPageTest {
     }
 
     @Test
-    public void navigationToAllTool() {
+    public void navigationToAllTools() {
         mainPage.seeDeveloperToolsButton.click();
         mainPage.findYourToolsButton.click();
 
