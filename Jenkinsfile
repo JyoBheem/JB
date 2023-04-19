@@ -2,17 +2,30 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                sh './gradlew build'
+            stage('Verify') {
+                steps {
+                    script {
+                    sh './gradlew version'
+                    }
+                }
+            }
+            stage('Build') {
+                steps {
+                    script {
+                    sh './gradlew build'
+                    }
+                }
+            }
+            stage('Test') {
+                steps {
+                  script {
+                    sh './gradlew clean test'
+                  }
+                }
             }
         }
-        stage('Test') {
-            steps {
-                sh './gradlew clean test'
-            }
 
-            post {
+        post {
                 // If Gradle was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
                 success {
@@ -27,6 +40,5 @@ pipeline {
                       useWrapperFileDirectly: true])
                 }
             }
-        }
+
     }
-}
