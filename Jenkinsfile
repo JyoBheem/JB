@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-            stage('Verify') {
-                steps {
-                    script {
-                    bat "gradlew version"
-                    }
-                }
+//             stage('Verify') {
+//                 steps {
+//                     script {
+//                     bat "gradlew version"
+//                     }
+//                 }
             }
             stage('Build') {
                 steps {
