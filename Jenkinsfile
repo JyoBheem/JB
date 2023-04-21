@@ -19,7 +19,7 @@ pipeline {
             stage('Test') {
                 steps {
                   script {
-                    bat "gradle clean test"
+                    bat "gradle test"
                   }
                 }
             }
