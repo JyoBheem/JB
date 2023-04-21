@@ -8,7 +8,7 @@ pipeline {
 //                     bat "gradlew version"
 //                     }
 //                 }
-            }
+//             }
             stage('Build') {
                 steps {
                     script {
