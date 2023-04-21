@@ -5,21 +5,21 @@ pipeline {
             stage('Verify') {
                 steps {
                     script {
-                    sh './gradlew version'
+                    bat 'gradle version'
                     }
                 }
             }
             stage('Build') {
                 steps {
                     script {
-                    sh './gradlew build'
+                    bat 'gradle build'
                     }
                 }
             }
             stage('Test') {
                 steps {
                   script {
-                    sh './gradlew clean test'
+                    bat 'gradlew clean test'
                   }
                 }
             }
