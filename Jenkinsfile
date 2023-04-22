@@ -2,26 +2,17 @@ pipeline {
     agent any
 
     stages {
-            stage('Build') {
-                steps {
-                    script {
-                    bat "gradlew build"
-                    }
-                }
-            }
             stage('Test') {
                 steps {
                   script {
-                    bat "gradlew test"
+                    bat "gradlew clean test"
                   }
                 }
-            }
-        }
 
-        post {
+                post {
                 // If Gradle was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-                success {
+                   success {
                     testNG()
                     allure([
                      includeProperties: false,
@@ -39,6 +30,7 @@ pipeline {
                       to: 'jyothi.jo6@gmail.com'
                       ])
                 }
+            }
         }
-
     }
+ }
