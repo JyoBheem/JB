@@ -29,9 +29,9 @@ pipeline {
                       reportBuildPolicy: 'ALWAYS',
                       results: [[path: 'target/allure-results']]
                       ])
-                      mail ([bcc: '',
+                      mail ([
+                      bcc: '',
                       body: '''Please find results at the below link:''',
-                      attachmentsPattern: 'allure-report.zip',
                       cc: '',
                       from: '',
                       replyTo: '',
