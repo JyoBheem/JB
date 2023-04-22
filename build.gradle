@@ -38,6 +38,8 @@ test {
 allure {
     autoconfigure = true
     version = "${allureVersion}"
+    reportDir = file('build/allure-results')
+    clean = true
 
     useTestNG {
         version = "${allureVersion}"

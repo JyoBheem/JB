@@ -17,7 +17,7 @@ pipeline {
                      includeProperties: false,
                       jdk: '',
                       reportBuildPolicy: 'ALWAYS',
-                      results: [[path: 'allure-report']]
+                      results: [[path: 'build/allure-results']]
                       ])
                mail ([
                       bcc: '',
