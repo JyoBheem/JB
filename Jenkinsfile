@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-//             stage('Verify') {
-//                 steps {
-//                     script {
-//                     bat "gradlew version"
-//                     }
-//                 }
-//             }
             stage('Build') {
                 steps {
                     script {
@@ -29,15 +22,13 @@ pipeline {
                 // If Gradle was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
                 success {
-                   publishHTML([
-                      allowMissing: false,
-                      alwaysLinkToLastBuild: false,
-                      keepAll: false,
-                      reportDir: 'lib/target/site/serenity/',
-                      reportFiles: 'index.html',
-                      reportName: 'Serenity Report',
-                      reportTitles: '',
-                      useWrapperFileDirectly: true])
+                    testNG()
+                    allure([
+                     includeProperties: false,
+                      jdk: '',
+                      reportBuildPolicy: 'ALWAYS',
+                      results: [[path: 'target/allure-results']]
+                      ])
                 }
             }
 
