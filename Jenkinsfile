@@ -23,10 +23,10 @@ pipeline {
                       bcc: '',
                       body: '''Please find results at the below link:''',
                       cc: '',
-                      from: '',
+                      from: 'jyothikishore2023@gmail.com',
                       replyTo: '',
                       subject: 'Smoke test result',
-                      to: 'jyothi.jo6@gmail.com'
+                      to: 'jyothikishore0208@gmail.com'
                       ])
                 }
             }
