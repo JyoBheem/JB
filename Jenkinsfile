@@ -26,7 +26,7 @@ pipeline {
                                 build url -  ${env.BUILD_URL}
                                 job url - ${env.JOB_URL}
                                 build number - ${env.BUILD_NUMBER}
-                                job name - ${env.JOB_NAME},
+                                job name - ${env.JOB_NAME}',
                       cc: '',
                       from: 'jyothikishore2023@gmail.com',
                       replyTo: '',
