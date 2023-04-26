@@ -21,12 +21,12 @@ pipeline {
                       ])
                mail ([
                       bcc: '',
-                      body: 'Please find results at the below link:
+                      body: "Please find results at the below link:
                                 project url -  ${env.PROJECT_URL}
                                 build url -  ${env.BUILD_URL}
                                 job url - ${env.JOB_URL}
                                 build number - ${env.BUILD_NUMBER}
-                                job name - ${env.JOB_NAME}',
+                                job name - ${env.JOB_NAME}",
                       cc: '',
                       from: 'jyothikishore2023@gmail.com',
                       replyTo: '',
@@ -36,12 +36,12 @@ pipeline {
                emailex
                t ([
                           attachmentsPattern: 'allure-report.zip',
-                          body: 'Please find results at the below link:
+                          body: "Please find results at the below link:
                                       project url -  ${env.PROJECT_URL}
                                       build url -  ${env.BUILD_URL}
                                       job url - ${env.JOB_URL}
                                       build number - ${env.BUILD_NUMBER}
-                                      job name - ${env.JOB_NAME}',
+                                      job name - ${env.JOB_NAME}",
                           subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER}",
                           mimeType: 'text/html',
                           to: 'jyothikishore0208@gmail.com',
