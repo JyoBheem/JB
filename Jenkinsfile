@@ -22,15 +22,15 @@ pipeline {
                mail ([
                       bcc: '',
                       body: '''Please find results at the below link:
-                                project url - ''' ${PROJECT_URL} '''
-                                build url - '''+ ${BUILD_URL} +'''
-                                job url - '''+ ${JOB_URL} +'''
-                                build number - '''+ ${BUILD_NUMBER} +'''
-                                job name = '''+${JOB_NAME},
+                                project url - ''' ${PROJECT_URL}
+                                '''build url - ''' ${BUILD_URL}
+                                '''job url - ''' ${JOB_URL}
+                                '''build number - ''' ${BUILD_NUMBER}
+                                '''job name = ''' ${JOB_NAME},
                       cc: '',
                       from: 'jyothikishore2023@gmail.com',
                       replyTo: '',
-                      subject: "Result for build - "+ ${env.BUILD_NUMBER} +" # job - "+ ${env.JOB_NAME},
+                      subject: "Result for build - " ${env.BUILD_NUMBER} " # job - " ${env.JOB_NAME},
                       to: 'jyothikishore0208@gmail.com'
                       ])
 //                emailext ([
