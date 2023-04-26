@@ -21,12 +21,12 @@ pipeline {
                       ])
                mail ([
                       bcc: '',
-                      body: "Please find results at the below link:
-                                project url - "+ ${PROJECT_URL} + "
-                                build url - "+ ${BUILD_URL} +"
-                                job url - "+ ${JOB_URL} +"
-                                build number - "+ ${BUILD_NUMBER} +"
-                                job name = "+${JOB_NAME},
+                      body: '''Please find results at the below link:
+                                project url - ''' ${PROJECT_URL} '''
+                                build url - '''+ ${BUILD_URL} +'''
+                                job url - '''+ ${JOB_URL} +'''
+                                build number - '''+ ${BUILD_NUMBER} +'''
+                                job name = '''+${JOB_NAME},
                       cc: '',
                       from: 'jyothikishore2023@gmail.com',
                       replyTo: '',
