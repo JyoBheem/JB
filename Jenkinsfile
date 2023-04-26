@@ -30,7 +30,7 @@ pipeline {
                       cc: '',
                       from: 'jyothikishore2023@gmail.com',
                       replyTo: '',
-                      subject: '''Result for build - ${env.BUILD_NUMBER} # job - ${env.JOB_NAME}''',
+                      subject: "Result for build - ${env.BUILD_NUMBER} # job - ${env.JOB_NAME}",
                       to: 'jyothikishore0208@gmail.com'
                       ])
                emailex
@@ -41,8 +41,8 @@ pipeline {
                                       build url -  ${env.BUILD_URL}
                                       job url - ${env.JOB_URL}
                                       build number - ${env.BUILD_NUMBER}
-                                      job name - ${env.JOB_NAME}",
-                          subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER}''',
+                                      job name - ${env.JOB_NAME}''',
+                          subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER}",
                           mimeType: 'text/html',
                           to: 'jyothikishore0208@gmail.com',
                           from:'jyothikishore2023@gmail.com'
