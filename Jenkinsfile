@@ -22,11 +22,11 @@ pipeline {
                mail ([
                       bcc: '',
                       body: '''Please find results at the below link:
-                                project url -  ${PROJECT_URL}
-                                build url -  ${BUILD_URL}
-                                job url - ${JOB_URL}
-                                build number - ${BUILD_NUMBER}
-                                job name = ${JOB_NAME}''',
+                                project url -  ${env.PROJECT_URL}
+                                build url -  ${env.BUILD_URL}
+                                job url - ${env.JOB_URL}
+                                build number - ${env.BUILD_NUMBER}
+                                job name = ${env.JOB_NAME}''',
                       cc: '',
                       from: 'jyothikishore2023@gmail.com',
                       replyTo: '',
