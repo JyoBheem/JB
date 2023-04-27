@@ -21,7 +21,7 @@ pipeline {
                       ])
                mail ([
                       bcc: '',
-                      body: "Build - ${env.BUILD_NUMBER} # job - ${env.JOB_NAME}",
+                      body: "Build - ${env.BUILD_URL} # job - ${env.JOB_URL} # Project - ${env.PROJECT_URL}",
                       cc: '',
                       from: 'jyothikishore2023@gmail.com',
                       replyTo: '',
